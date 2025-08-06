@@ -1,4 +1,5 @@
 import { BiHome, BiRightArrowAlt } from "react-icons/bi";
+import { MdOutlineAttachMoney } from "react-icons/md";
 
 import styles from "../styles/LandingPage.module.css";
 
@@ -8,16 +9,17 @@ export default function LandingPage() {
       <section className={styles.hero}>
         <div className={styles.logoHero}>
           <BiHome />
+          <MdOutlineAttachMoney className={styles.MdOutlineAttachMoney} />
         </div>
         <h1 className={styles.heroTitle}>Conecta Bairro</h1>
         <p className={styles.heroSubtitle}>
-          A plataforma que conecta pessoas da sua comunidade para
+          A plataforma que conecta pessoas da sua comunidade para{" "}
           <strong>oportunidades de trabalho</strong> e serviços locais.
         </p>
         <div className={styles.buttons}>
           <button className={styles.start}>
             Começar agora
-            <BiRightArrowAlt size={20}/>
+            <BiRightArrowAlt className={styles.BiRightArrowAlt} />
           </button>
           <button className={styles.more}>Saiba mais</button>
         </div>
@@ -36,11 +38,14 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-{/* ----------------------------------------------------------------------------------------------------- */}
+      {/* ----------------------------------------------------------------------------------------------------- */}
       <section className={styles.features}>
-        <h2 className={styles.featuresTitle}>Tudo que você precisa em um só lugar</h2>
+        <h2 className={styles.featuresTitle}>
+          Tudo que você precisa em um só lugar
+        </h2>
         <p className={styles.featuresSubtitle}>
-          Conecte-se com pessoas da sua comunidade e encontre oportunidades de trabalho e serviços locais.
+          Conecte-se com pessoas da sua comunidade e encontre oportunidades de
+          trabalho e serviços locais.
         </p>
         <div className={styles.featureList}>
           <div className={styles.featureItem}>

@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 2rem);
+  min-height: 100vh;
 }
 .logoHero {
   font-size: 2.5rem;
@@ -21,7 +21,20 @@
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
   line-height: 0;
+  rotate: 5deg;
+  position: relative;
 }
+
+.hero .MdOutlineAttachMoney {
+  font-size: 1.25rem;
+  color: var(--primary-color-950);
+  position: absolute;
+  bottom: 80%;
+  left: 80%;
+  background: var(--yellow-500);
+  border-radius: 100%;
+}
+
 .heroTitle {
   font-size: 2.5rem;
   text-align: center;
@@ -39,7 +52,7 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .75rem;
   margin-bottom: 1.5rem;
   width: 100%;
 }
@@ -57,10 +70,15 @@
   font-size: 0.7rem;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: 0.25s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.hero .BiRightArrowAlt {
+  font-size: 1.25rem;
 }
 .start:hover {
-  scale: 1.05;
+  scale: 1.025;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: var(--secundary-gradient-dark);
 }
 .more {
   background: rgba(255, 255, 255, 0.15);
@@ -79,7 +97,43 @@
   flex-direction: column;
   align-items: center;
 }
+.statsItem strong {
+  letter-spacing: .1rem;
+}
 .statsItem p {
-  font-size: 0.7rem;
+  font-size: 0.55rem;
+  color: var(--gray-500);
 }
 /* features ------------------------------------------------ */
+.features {
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featuresTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.featuresSubtitle {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+.featuresItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+}

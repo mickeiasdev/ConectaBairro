@@ -17,9 +17,14 @@
   --primary-color-900: #002F4A;
   --primary-color-950: #001F33;
   
+  --yellow-500: #FBBF24;
+
   --white: #ffffff;
+
+  --gray-500: #d3d3d3;
 
   --primary-gradient: linear-gradient(45deg, var(--primary-color-950) 0%, var(--primary-color-800) 100%);
   --secundary-gradient: linear-gradient(90deg, var(--primary-color-300) 25%, var(--primary-color-500) 100%);
+  --secundary-gradient-dark: linear-gradient(90deg, var(--primary-color-400) 25%, var(--primary-color-600) 100%);
   
 }
