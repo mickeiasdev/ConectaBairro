@@ -21,10 +21,15 @@
 
   --white: #ffffff;
 
-  --gray-500: #d3d3d3;
+  --black: #000000;
 
-  --primary-gradient: linear-gradient(45deg, var(--primary-color-950) 0%, var(--primary-color-800) 100%);
-  --secundary-gradient: linear-gradient(90deg, var(--primary-color-300) 25%, var(--primary-color-500) 100%);
-  --secundary-gradient-dark: linear-gradient(90deg, var(--primary-color-400) 25%, var(--primary-color-600) 100%);
+  --gray-200: #ebebeb;
+  --gray-500: #d3d3d3;
+  --gray-300: #a9a9a9;
+
+  --primary-gradient: linear-gradient(45deg, var(--primary-color-950) 0%, var(--primary-color-900) 100%);
+  --primary-gradient-light: linear-gradient(45deg, var(--primary-color-700) 0%, var(--primary-color-800) 100%);
+  --secundary-gradient: linear-gradient(90deg, var(--primary-color-400) 25%, var(--primary-color-600) 100%);
+  --secundary-gradient-light: linear-gradient(90deg, var(--primary-color-300) 25%, var(--primary-color-500) 100%);
   
 }

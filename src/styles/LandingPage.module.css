@@ -1,13 +1,12 @@
 .main {
-  width: 100%;
-  padding: 1rem;
+  width: 320px;
   background: var(--primary-gradient);
   color: var(--white);
 }
 /* hero ----------------------------------------------------- */
 .hero {
-  max-width: 320px;
   margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,8 +24,9 @@
   position: relative;
 }
 
-.hero .MdOutlineAttachMoney {
+.hero .FiDollarSign {
   font-size: 1.25rem;
+  padding: 0.25rem;
   color: var(--primary-color-950);
   position: absolute;
   bottom: 80%;
@@ -45,14 +45,13 @@
 .heroSubtitle {
   font-size: 0.7rem;
   text-align: center;
-  margin-bottom: 1.5rem;
   max-width: 100%;
   line-height: 1.5;
 }
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: 0.75rem;
   margin-bottom: 1.5rem;
   width: 100%;
 }
@@ -78,7 +77,6 @@
 .start:hover {
   scale: 1.025;
   border-color: rgba(255, 255, 255, 0.5);
-  background: var(--secundary-gradient-dark);
 }
 .more {
   background: rgba(255, 255, 255, 0.15);
@@ -98,7 +96,7 @@
   align-items: center;
 }
 .statsItem strong {
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 .statsItem p {
   font-size: 0.55rem;
@@ -106,34 +104,187 @@
 }
 /* features ------------------------------------------------ */
 .features {
-  max-width: 320px;
+  min-height: 100vh;
+  padding: 0 1.5rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .featuresTitle {
-  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
+  line-height: 1.25;
 }
 .featuresSubtitle {
   font-size: 0.7rem;
   text-align: center;
   margin-bottom: 1.5rem;
   max-width: 100%;
+  line-height: 1.5;
 }
-.featuresList {
+.featureList {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+  margin-bottom: 2rem;
 }
-.featuresItem {
+.featureItem {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.featureItem:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.featureIcon {
+  font-size: 3rem;
+  padding: 0.75rem;
+  background: var(--secundary-gradient);
+  border-radius: 0.5rem;
+}
+.featureItem h3 {
+  line-height: 1.25;
+}
+.featureItem p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--gray-200);
+}
+/* tutorial -------------------------------------------------- */
+.tutorial {
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tutorialTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+.tutorialSubtitle {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  line-height: 1.5;
+}
+.tutorialSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.tutorialStep {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem;
+}
+.stepNumber {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secundary-gradient);
+  border-radius: 100%;
+}
+.tutorialStep p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  max-width: 20rem;
+  color: var(--gray-200);
+}
+/* feedbacks --------------------------------------------------- */
+.feedbacks {
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+.feedbacksTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+.feedbacksSubtitle {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  line-height: 1.5;
+}
+.feedbacksList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.feedbacksItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* cta --------------------------------------------------------- */
+.cta {
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ctaTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+.ctaSubtitle {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  line-height: 1.5;
+}
+.ctaButton {
+  color: var(--white);
+  background: var(--secundary-gradient);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+}
+.ctaButton:hover {
+  scale: 1.025;
+  border-color: rgba(255, 255, 255, 0.5);
 }
