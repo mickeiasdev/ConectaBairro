@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color-100: #DFF2FE;
+  --primary-color-200: #B8E6FE;
+  --primary-color-300: #73D4FF;
+  --primary-color-400: #00BCFF;
+  --primary-color-500: #00A6F4;
+  --primary-color-600: #0088D1;
+  --primary-color-700: #0069A8;
+  --primary-color-800: #004A70;
+  --primary-color-900: #002F4A;
+  --primary-color-950: #001F33;
+  
+  --white: #ffffff;
+
+  --primary-gradient: linear-gradient(45deg, var(--primary-color-950) 0%, var(--primary-color-800) 100%);
+  --secundary-gradient: linear-gradient(90deg, var(--primary-color-300) 25%, var(--primary-color-500) 100%);
+  
+}
