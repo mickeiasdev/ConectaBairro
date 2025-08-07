@@ -16,6 +16,9 @@
   --primary-color-800: #004A70;
   --primary-color-900: #002F4A;
   --primary-color-950: #001F33;
+
+  --glass-color: rgba(255, 255, 255, 0.1);
+  --glass-hover: rgba(255, 255, 255, 0.175);
   
   --yellow-500: #FBBF24;
 

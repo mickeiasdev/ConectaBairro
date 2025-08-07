@@ -4,11 +4,11 @@ import { LuShield } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
 import {
   FiUsers,
-  FiHome,
   FiDollarSign,
   FiUser,
   FiCheckCircle,
 } from "react-icons/fi";
+import { MdConnectWithoutContact } from "react-icons/md";
 
 import styles from "../styles/LandingPage.module.css";
 
@@ -17,7 +17,7 @@ export default function LandingPage() {
     <div className={styles.main}>
       <section className={styles.hero}>
         <div className={styles.logoHero}>
-          <FiHome />
+          <MdConnectWithoutContact />
           <FiDollarSign className={styles.FiDollarSign} />
         </div>
         <h1 className={styles.heroTitle}>Conecta Bairro</h1>
