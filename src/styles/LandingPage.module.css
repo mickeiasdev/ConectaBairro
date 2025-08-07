@@ -2,46 +2,57 @@
   width: 100%;
   background: var(--primary-gradient);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
 }
 
 /* Gerais */
-section, 
-.hero, 
-.features, 
-.tutorial, 
-.feedbacks, 
+.hero,
+.features,
+.tutorial,
+.feedbacks,
 .cta {
-  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
+.hero {
+  height: 100vh;
+}
+.features,
+.tutorial,
+.feedbacks {
+  padding-bottom: 7.5rem;
+}
+h1,
+h2,
+h3,
+.featuresTitle,
+.tutorialTitle,
+.feedbacksTitle,
+.ctaTitle {
   text-align: center;
   margin-bottom: 0.5rem;
   line-height: 1.25;
-  margin-top: 2rem;
 }
-
-.subtitle, 
-.featuresSubtitle, 
-.tutorialSubtitle, 
-.feedbacksSubtitle, 
+.featuresSubtitle,
+.tutorialSubtitle,
+.feedbacksSubtitle,
 .ctaSubtitle,
 .heroSubtitle {
   font-size: 0.7rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   max-width: 100%;
   line-height: 1.5;
 }
 
 /* Botões padrão */
-.start, .more, .ctaButton {
+.start,
+.more {
   color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -54,15 +65,13 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
   border: 1px solid transparent;
   transition: all 0.1s ease-in-out;
 }
-
-.start, .ctaButton {
+.start {
   background: var(--secundary-gradient);
 }
-.start:hover, .ctaButton:hover {
+.start:hover {
   scale: 1.025;
   border-color: rgba(255, 255, 255, 0.5);
 }
-
 .more {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -72,9 +81,6 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
 }
 
 /* Hero */
-.hero {
-  padding-top: 3rem;
-}
 .logoHero {
   font-size: 2.5rem;
   background: var(--secundary-gradient);
@@ -86,7 +92,7 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
   position: relative;
 }
 .hero .FiDollarSign {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 0.25rem;
   color: var(--primary-color-950);
   position: absolute;
@@ -131,18 +137,18 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
 }
 
 /* Lista genérica (Features, Tutorial, Feedbacks) */
-.featureList, 
-.tutorialSteps, 
+.featureList,
+.tutorialSteps,
 .feedbackList {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.5rem;
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 /* Cards padrão */
-.featureItem, 
+.featureItem,
 .feedbackItem {
   display: flex;
   flex-direction: column;
@@ -152,23 +158,28 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.featureItem:hover, 
+.featureItem:hover,
 .feedbackItem:hover {
   background: rgba(255, 255, 255, 0.25);
 }
+.featureItem h3,
+.tutorialStep h3 {
+  margin-top: 1rem;
+}
+
 .featureIcon {
   font-size: 3rem;
   padding: 0.75rem;
   background: var(--secundary-gradient);
   border-radius: 0.5rem;
 }
-.feedbackIcon{
+.feedbackIcon {
   font-size: 2.5rem;
   padding: 0.5rem;
   background: var(--secundary-gradient);
   border-radius: 100%;
 }
-.featureItem p, 
+.featureItem p,
 .tutorialStep p {
   font-size: 0.7rem;
   line-height: 1.5;
@@ -188,7 +199,7 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
   justify-content: center;
   background: var(--secundary-gradient);
   border-radius: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .tutorialStep p {
   max-width: 20rem;
@@ -197,7 +208,7 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
   gap: 1rem;
 }
 .feedbackItem p {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 .feedbackUser {
   display: flex;
@@ -206,8 +217,21 @@ h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
   line-height: 1.5;
 }
 .feedbackUser strong {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 .feedbackUser p {
-  font-size: .7rem;
+  font-size: 0.7rem;
+}
+.footerStamps {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: var(--gray-500);
+}
+.footerStamps div {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
+  text-align: center;
 }

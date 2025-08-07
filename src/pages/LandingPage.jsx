@@ -2,7 +2,13 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { IoLocationOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
-import { FiUsers, FiHome, FiDollarSign, FiUser } from "react-icons/fi";
+import {
+  FiUsers,
+  FiHome,
+  FiDollarSign,
+  FiUser,
+  FiCheckCircle,
+} from "react-icons/fi";
 
 import styles from "../styles/LandingPage.module.css";
 
@@ -136,7 +142,14 @@ export default function LandingPage() {
         </p>
         <div className={styles.feedbackList}>
           <div className={styles.feedbackItem}>
-            <p>"Encontrei meu trabalho dos sonhos aqui!"</p>
+            {/* component estrelas avaliacao */}
+            <p>
+              "Encontrei um trabalho incrível perto de casa, algo que jamais
+              imaginei ser possível. A plataforma conectou-me com uma
+              oportunidade única, e agora estou no meu emprego dos sonhos. Foi
+              rápido, eficiente e me fez perceber como a busca por novas
+              oportunidades pode ser simples e acessível."
+            </p>
             <div className={styles.feedbackUser}>
               <FiUser className={styles.feedbackIcon} />
               <div>
@@ -146,7 +159,14 @@ export default function LandingPage() {
             </div>
           </div>
           <div className={styles.feedbackItem}>
-            <p>"Serviços de qualidade e profissionais confiáveis."</p>
+            {/* component estrelas avaliacao */}
+            <p>
+              "A plataforma oferece um serviço excepcional. Além de ser fácil de
+              usar, encontrei vários profissionais qualificados para expandir
+              meus negócios. A qualidade das recomendações é impressionante e,
+              sem dúvida, foi um dos melhores investimentos que fiz para o
+              crescimento da minha empresa."
+            </p>
             <div className={styles.feedbackUser}>
               <FiUser className={styles.feedbackIcon} />
               <div>
@@ -156,7 +176,14 @@ export default function LandingPage() {
             </div>
           </div>
           <div className={styles.feedbackItem}>
-            <p>"A comunidade é incrível, todos se ajudam!"</p>
+            {/* component estrelas avaliacao */}
+            <p>
+              "Sou muito grato por ter encontrado essa comunidade. Graças a ela,
+              agora posso oferecer meus serviços de maneira mais visível e
+              encontrar clientes que realmente precisam do meu trabalho. A
+              plataforma tem se mostrado uma excelente aliada para expandir meu
+              alcance e encontrar novas oportunidades de forma constante."
+            </p>
             <div className={styles.feedbackUser}>
               <FiUser className={styles.feedbackIcon} />
               <div>
@@ -167,19 +194,32 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-      <section className={styles.cta}>
-        <h2 className={styles.ctaTitle}>Pronto para começar?</h2>
-        <p className={styles.ctaSubtitle}>
-          Junte-se a milhares de pessoas que já estão aproveitando as
-          oportunidades locais.
-        </p>
-        <div className={styles.buttons}>
-          <button className={styles.start}>
-            Começar agora
-            <BiRightArrowAlt className={styles.BiRightArrowAlt} />
-          </button>
-        </div>
-      </section>
+      {/* ----------------------------------------------------------------------------------------------------- */}
+      <footer>
+        <section className={styles.cta}>
+          <h2 className={styles.ctaTitle}>Pronto para começar?</h2>
+          <p className={styles.ctaSubtitle}>
+            Junte-se a milhares de pessoas que já estão aproveitando as
+            oportunidades locais.
+          </p>
+          <button className={styles.start}>Começar agora</button>
+          <div className={styles.footerStamps}>
+            {/* componente de stamp */}
+            <div>
+              <FiCheckCircle />
+              <p>100% Gratuito</p>
+            </div>
+            <div>
+              <FiCheckCircle />
+              <p>Sem compromisso</p>
+            </div>
+            <div>
+              <FiCheckCircle />
+              <p>Cadastro rápido</p>
+            </div>
+          </div>
+        </section>
+      </footer>
     </div>
   );
 }
