@@ -2,7 +2,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { IoLocationOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
-import { FiUsers, FiHome, FiDollarSign } from "react-icons/fi";
+import { FiUsers, FiHome, FiDollarSign, FiUser } from "react-icons/fi";
 
 import styles from "../styles/LandingPage.module.css";
 
@@ -93,6 +93,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      {/* ---------------------------------------------------------------------------------------------------- */}
       <section className={styles.tutorial}>
         <h2 className={styles.tutorialTitle}>Como funciona?</h2>
         <p className={styles.tutorialSubtitle}>
@@ -126,6 +127,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      {/* ----------------------------------------------------------------------------------------------------- */}
       <section className={styles.feedbacks}>
         <h2 className={styles.feedbacksTitle}>O que nossos usuários dizem</h2>
         <p className={styles.feedbacksSubtitle}>
@@ -135,15 +137,33 @@ export default function LandingPage() {
         <div className={styles.feedbackList}>
           <div className={styles.feedbackItem}>
             <p>"Encontrei meu trabalho dos sonhos aqui!"</p>
-            <span>- Maria S.</span>
+            <div className={styles.feedbackUser}>
+              <FiUser className={styles.feedbackIcon} />
+              <div>
+                <strong>Maria Costa</strong>
+                <p>Contadora</p>
+              </div>
+            </div>
           </div>
           <div className={styles.feedbackItem}>
             <p>"Serviços de qualidade e profissionais confiáveis."</p>
-            <span>- João P.</span>
+            <div className={styles.feedbackUser}>
+              <FiUser className={styles.feedbackIcon} />
+              <div>
+                <strong>João Pedro</strong>
+                <p>Empresário</p>
+              </div>
+            </div>
           </div>
           <div className={styles.feedbackItem}>
             <p>"A comunidade é incrível, todos se ajudam!"</p>
-            <span>- Ana L.</span>
+            <div className={styles.feedbackUser}>
+              <FiUser className={styles.feedbackIcon} />
+              <div>
+                <strong>Guilherme Santos</strong>
+                <p>Eletricista</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -153,7 +173,12 @@ export default function LandingPage() {
           Junte-se a milhares de pessoas que já estão aproveitando as
           oportunidades locais.
         </p>
-        <button className={styles.ctaButton}>Criar Conta</button>
+        <div className={styles.buttons}>
+          <button className={styles.start}>
+            Começar agora
+            <BiRightArrowAlt className={styles.BiRightArrowAlt} />
+          </button>
+        </div>
       </section>
     </div>
   );
