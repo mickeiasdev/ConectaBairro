@@ -1,17 +1,78 @@
 .main {
-  width: 320px;
+  width: 100%;
   background: var(--primary-gradient);
   color: var(--white);
 }
-/* hero ----------------------------------------------------- */
-.hero {
+
+/* Gerais */
+section, 
+.hero, 
+.features, 
+.tutorial, 
+.feedbacks, 
+.cta {
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+}
+
+h1, h2, h3, .featuresTitle, .tutorialTitle, .feedbacksTitle, .ctaTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  margin-top: 2rem;
+}
+
+.subtitle, 
+.featuresSubtitle, 
+.tutorialSubtitle, 
+.feedbacksSubtitle, 
+.ctaSubtitle {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  line-height: 1.5;
+}
+
+/* Botões padrão */
+.start, .more, .ctaButton {
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+.start, .ctaButton {
+  background: var(--secundary-gradient);
+}
+.start:hover, .ctaButton:hover {
+  scale: 1.025;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.more {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.more:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Hero */
+.hero {
+  padding-top: 3rem;
 }
 .logoHero {
   font-size: 2.5rem;
@@ -23,7 +84,6 @@
   rotate: 5deg;
   position: relative;
 }
-
 .hero .FiDollarSign {
   font-size: 1.25rem;
   padding: 0.25rem;
@@ -34,7 +94,6 @@
   background: var(--yellow-500);
   border-radius: 100%;
 }
-
 .heroTitle {
   font-size: 2.5rem;
   text-align: center;
@@ -43,10 +102,7 @@
   margin-bottom: 1.5rem;
 }
 .heroSubtitle {
-  font-size: 0.7rem;
-  text-align: center;
-  max-width: 100%;
-  line-height: 1.5;
+  composes: subtitle;
 }
 .buttons {
   display: flex;
@@ -55,35 +111,8 @@
   margin-bottom: 1.5rem;
   width: 100%;
 }
-.start,
-.more {
-  color: var(--white);
-  background: var(--secundary-gradient);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  font-size: 0.7rem;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.1s ease-in-out;
-}
 .hero .BiRightArrowAlt {
   font-size: 1.25rem;
-}
-.start:hover {
-  scale: 1.025;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.more {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.more:hover {
-  background: rgba(255, 255, 255, 0.25);
 }
 .stats {
   display: flex;
@@ -102,46 +131,31 @@
   font-size: 0.55rem;
   color: var(--gray-500);
 }
-/* features ------------------------------------------------ */
-.features {
-  min-height: 100vh;
-  padding: 0 1.5rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.featuresTitle {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  line-height: 1.25;
-}
-.featuresSubtitle {
-  font-size: 0.7rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  max-width: 100%;
-  line-height: 1.5;
-}
-.featureList {
+
+/* Lista genérica (Features, Tutorial, Feedbacks) */
+.featureList, 
+.tutorialSteps, 
+.feedbacksList {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
   margin-bottom: 2rem;
 }
-.featureItem {
+
+/* Cards padrão */
+.featureItem, 
+.feedbacksItem {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.featureItem:hover {
+.featureItem:hover, 
+.feedbacksItem:hover {
   background: rgba(255, 255, 255, 0.25);
 }
 .featureIcon {
@@ -150,49 +164,19 @@
   background: var(--secundary-gradient);
   border-radius: 0.5rem;
 }
-.featureItem h3 {
-  line-height: 1.25;
-}
-.featureItem p {
+.featureItem p, 
+.tutorialStep p, 
+.feedbacksItem p {
   font-size: 0.7rem;
   line-height: 1.5;
   color: var(--gray-200);
-}
-/* tutorial -------------------------------------------------- */
-.tutorial {
-  min-height: 100vh;
-  padding: 0 1.5rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.tutorialTitle {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
-}
-.tutorialSubtitle {
-  font-size: 0.7rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  max-width: 100%;
-  line-height: 1.5;
-}
-.tutorialSteps {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  margin-bottom: 2rem;
-  text-align: center;
 }
 .tutorialStep {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  text-align: center;
 }
 .stepNumber {
   width: 3rem;
@@ -204,87 +188,5 @@
   border-radius: 100%;
 }
 .tutorialStep p {
-  font-size: 0.7rem;
-  line-height: 1.5;
   max-width: 20rem;
-  color: var(--gray-200);
-}
-/* feedbacks --------------------------------------------------- */
-.feedbacks {
-  min-height: 100vh;
-  padding: 0 1.5rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} 
-.feedbacksTitle {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
-}
-.feedbacksSubtitle {
-  font-size: 0.7rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  max-width: 100%;
-  line-height: 1.5;
-}
-.feedbacksList {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-.feedbacksItem {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-/* cta --------------------------------------------------------- */
-.cta {
-  padding: 2rem 1.5rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.ctaTitle {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
-}
-.ctaSubtitle {
-  font-size: 0.7rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  max-width: 100%;
-  line-height: 1.5;
-}
-.ctaButton {
-  color: var(--white);
-  background: var(--secundary-gradient);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  font-size: 0.7rem;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.1s ease-in-out;
-}
-.ctaButton:hover {
-  scale: 1.025;
-  border-color: rgba(255, 255, 255, 0.5);
 }
