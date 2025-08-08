@@ -19,6 +19,8 @@
 
   --glass-color: rgba(255, 255, 255, 0.1);
   --glass-hover: rgba(255, 255, 255, 0.175);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-border-hover: rgba(255, 255, 255, 0.5);
   
   --yellow-500: #FBBF24;
 

@@ -1,16 +1,16 @@
+import FeedbackApp from "../components/FeedbackApp";
+import Stamps from "../components/Stamps";
+
 import { BiRightArrowAlt } from "react-icons/bi";
 import { IoLocationOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
-import {
-  FiUsers,
-  FiDollarSign,
-  FiUser,
-  FiCheckCircle,
-} from "react-icons/fi";
+import { FiUsers, FiDollarSign, } from "react-icons/fi";
 import { MdConnectWithoutContact } from "react-icons/md";
 
 import styles from "../styles/LandingPage.module.css";
+
+import { arrFeedbackApp } from "../arrays/arrays";
 
 export default function LandingPage() {
   return (
@@ -141,58 +141,11 @@ export default function LandingPage() {
           oportunidades locais.
         </p>
         <div className={styles.feedbackList}>
-          <div className={styles.feedbackItem}>
-            {/* component estrelas avaliacao */}
-            <p>
-              "Encontrei um trabalho incrível perto de casa, algo que jamais
-              imaginei ser possível. A plataforma conectou-me com uma
-              oportunidade única, e agora estou no meu emprego dos sonhos. Foi
-              rápido, eficiente e me fez perceber como a busca por novas
-              oportunidades pode ser simples e acessível."
-            </p>
-            <div className={styles.feedbackUser}>
-              <FiUser className={styles.feedbackIcon} />
-              <div>
-                <strong>Maria Costa</strong>
-                <p>Contadora</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.feedbackItem}>
-            {/* component estrelas avaliacao */}
-            <p>
-              "A plataforma oferece um serviço excepcional. Além de ser fácil de
-              usar, encontrei vários profissionais qualificados para expandir
-              meus negócios. A qualidade das recomendações é impressionante e,
-              sem dúvida, foi um dos melhores investimentos que fiz para o
-              crescimento da minha empresa."
-            </p>
-            <div className={styles.feedbackUser}>
-              <FiUser className={styles.feedbackIcon} />
-              <div>
-                <strong>João Pedro</strong>
-                <p>Empresário</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.feedbackItem}>
-            {/* component estrelas avaliacao */}
-            <p>
-              "Sou muito grato por ter encontrado essa comunidade. Graças a ela,
-              agora posso oferecer meus serviços de maneira mais visível e
-              encontrar clientes que realmente precisam do meu trabalho. A
-              plataforma tem se mostrado uma excelente aliada para expandir meu
-              alcance e encontrar novas oportunidades de forma constante."
-            </p>
-            <div className={styles.feedbackUser}>
-              <FiUser className={styles.feedbackIcon} />
-              <div>
-                <strong>Guilherme Santos</strong>
-                <p>Eletricista</p>
-              </div>
-            </div>
-          </div>
+          {arrFeedbackApp.map((user) => (
+          <FeedbackApp rating={5} amount={5} user={user} />
+        ))}
         </div>
+        
       </section>
       {/* ----------------------------------------------------------------------------------------------------- */}
       <footer>
@@ -204,19 +157,9 @@ export default function LandingPage() {
           </p>
           <button className={styles.start}>Começar agora</button>
           <div className={styles.footerStamps}>
-            {/* componente de stamp */}
-            <div>
-              <FiCheckCircle />
-              <p>100% Gratuito</p>
-            </div>
-            <div>
-              <FiCheckCircle />
-              <p>Sem compromisso</p>
-            </div>
-            <div>
-              <FiCheckCircle />
-              <p>Cadastro rápido</p>
-            </div>
+            <Stamps title="100% Gratuito"/>
+            <Stamps title="Sem compromisso"/>
+            <Stamps title="Cadastro rápido"/>
           </div>
         </section>
       </footer>

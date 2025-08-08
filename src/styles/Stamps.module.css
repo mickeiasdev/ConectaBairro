@@ -1,0 +1,8 @@
+.stamp {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--gray-500);
+}
