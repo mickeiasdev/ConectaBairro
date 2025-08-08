@@ -1,0 +1,15 @@
+// style
+import styles from "../styles/Logo.module.css"
+
+// icons
+import { FiDollarSign } from "react-icons/fi";
+import { MdConnectWithoutContact } from "react-icons/md";
+
+export default function Logo() {
+  return (
+    <div className={styles.logo}>
+      <MdConnectWithoutContact />
+      <FiDollarSign className={styles.dollar} />
+    </div>
+  );
+}

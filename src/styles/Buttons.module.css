@@ -1,0 +1,32 @@
+.primaryButton, .secundaryButton {
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  background: var(--secundary-gradient);
+}
+
+.primaryButton:hover {
+  scale: 1.025;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.secundaryButton {
+  background: var(--glass-color);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.secundaryButton:hover {
+  background: var(--glass-hover);
+}
+
+.primaryIcon {
+  font-size: 1.25rem;
+}

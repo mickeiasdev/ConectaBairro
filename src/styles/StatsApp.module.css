@@ -1,0 +1,12 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats strong {
+  letter-spacing: 0.1rem;
+}
+.stats p {
+  font-size: 0.55rem;
+  color: var(--gray-500);
+}

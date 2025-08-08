@@ -1,0 +1,22 @@
+.logo {
+  width: fit-content;
+  font-size: 3.5rem;
+  background: var(--secundary-gradient);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 0;
+  rotate: 5deg;
+  position: relative;
+}
+
+.dollar {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  color: var(--primary-color-950);
+  position: absolute;
+  bottom: 80%;
+  left: 80%;
+  background: var(--yellow-500);
+  border-radius: 100%;
+}

@@ -1,52 +1,25 @@
+// components
 import FeedbackApp from "../components/FeedbackApp";
 import Stamps from "../components/Stamps";
+import {PrimaryButton} from "../components/Buttons"
+import LandingPageHero from "../components/LandingPageHero"
 
-import { BiRightArrowAlt } from "react-icons/bi";
+// icons
 import { IoLocationOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
-import { FiUsers, FiDollarSign, } from "react-icons/fi";
-import { MdConnectWithoutContact } from "react-icons/md";
+import { FiUsers } from "react-icons/fi";
 
+// styles
 import styles from "../styles/LandingPage.module.css";
 
+// data
 import { arrFeedbackApp } from "../arrays/arrays";
 
 export default function LandingPage() {
   return (
     <div className={styles.main}>
-      <section className={styles.hero}>
-        <div className={styles.logoHero}>
-          <MdConnectWithoutContact />
-          <FiDollarSign className={styles.FiDollarSign} />
-        </div>
-        <h1 className={styles.heroTitle}>Conecta Bairro</h1>
-        <p className={styles.heroSubtitle}>
-          A plataforma que conecta pessoas da sua comunidade para{" "}
-          <strong>oportunidades de trabalho</strong> e serviços locais.
-        </p>
-        <div className={styles.buttons}>
-          <button className={styles.start}>
-            Começar agora
-            <BiRightArrowAlt className={styles.BiRightArrowAlt} />
-          </button>
-          <button className={styles.more}>Saiba mais</button>
-        </div>
-        <div className={styles.stats}>
-          <div className={styles.statsItem}>
-            <strong>500+</strong>
-            <p>Vagas ativas</p>
-          </div>
-          <div className={styles.statsItem}>
-            <strong>1.2K+</strong>
-            <p>Prestadores</p>
-          </div>
-          <div className={styles.statsItem}>
-            <strong>5K+</strong>
-            <p>Úsuarios</p>
-          </div>
-        </div>
-      </section>
+      <LandingPageHero/>
       {/* ----------------------------------------------------------------------------------------------------- */}
       <section className={styles.features}>
         <h2 className={styles.featuresTitle}>
@@ -142,7 +115,7 @@ export default function LandingPage() {
         </p>
         <div className={styles.feedbackList}>
           {arrFeedbackApp.map((user) => (
-          <FeedbackApp rating={5} amount={5} user={user} />
+          <FeedbackApp key={user.comment} rating={5} amount={5} user={user} />
         ))}
         </div>
         
@@ -155,7 +128,7 @@ export default function LandingPage() {
             Junte-se a milhares de pessoas que já estão aproveitando as
             oportunidades locais.
           </p>
-          <button className={styles.start}>Começar agora</button>
+          <PrimaryButton title="Começar agora"/>
           <div className={styles.footerStamps}>
             <Stamps title="100% Gratuito"/>
             <Stamps title="Sem compromisso"/>

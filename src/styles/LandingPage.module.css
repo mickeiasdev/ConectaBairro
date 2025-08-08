@@ -4,11 +4,12 @@
   color: var(--white);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 1.5rem;
 }
 
 /* Gerais */
-.hero,
 .features,
 .tutorial,
 .feedbacks,
@@ -19,9 +20,7 @@
   align-items: center;
   justify-content: center;
 }
-.hero {
-  height: 100vh;
-}
+
 .features,
 .tutorial,
 .feedbacks {
@@ -50,91 +49,7 @@ h3,
   line-height: 1.5;
 }
 
-/* Botões padrão */
-.start,
-.more {
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.2s ease-in-out;
-}
-.start {
-  background: var(--secundary-gradient);
-}
-.start:hover {
-  scale: 1.025;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.more {
-  background: var(--glass-color);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.more:hover {
-  background: var(--glass-hover)
-}
-
 /* Hero */
-.logoHero {
-  font-size: 3.5rem;
-  background: var(--secundary-gradient);
-  padding: .5rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 0;
-  rotate: 5deg;
-  position: relative;
-}
-.hero .FiDollarSign {
-  font-size: 1.5rem;
-  padding: 0.25rem;
-  color: var(--primary-color-950);
-  position: absolute;
-  bottom: 80%;
-  left: 80%;
-  background: var(--yellow-500);
-  border-radius: 100%;
-}
-.heroTitle {
-  font-size: 2.5rem;
-  text-align: center;
-  max-width: 10rem;
-  line-height: 1.25;
-  margin-bottom: 1.5rem;
-}
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-}
-.hero .BiRightArrowAlt {
-  font-size: 1.25rem;
-}
-.stats {
-  display: flex;
-  justify-content: space-between;
-  gap: 2.5rem;
-}
-.statsItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.statsItem strong {
-  letter-spacing: 0.1rem;
-}
-.statsItem p {
-  font-size: 0.55rem;
-  color: var(--gray-500);
-}
 
 /* Lista genérica (Features, Tutorial, Feedbacks) */
 .featureList,
