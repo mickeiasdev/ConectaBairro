@@ -12,7 +12,7 @@ import styles from "../styles/LandingPageHero.module.css";
 export default function LandingPageHero() {
   return (
     <section className={styles.hero}>
-      <Logo />
+      <Logo style={styles.logo}/>
       <div className={styles.titles}>
         <h1 className={styles.title}>Conecta</h1>
         <h1 className={styles.title}>Bairro</h1>
@@ -23,19 +23,19 @@ export default function LandingPageHero() {
       </p>
       <div className={styles.buttons}>
         <PrimaryButton
-          className={styles.primaryButton}
+          style={styles.primaryButton}
           title="Começar agora"
           icon={BiRightArrowAlt}
         />
         <SecundaryButton
-          className={styles.secundaryButton}
+          style={styles.secundaryButton}
           title="Saiba mais"
         />
       </div>
       <div className={styles.stats}>
-        <StatsApp title="500+" subtitle="Vagas ativas" />
-        <StatsApp title="1.2K+" subtitle="Prestadores" />
-        <StatsApp title="5K+" subtitle="Úsuarios" />
+        <StatsApp title="500+" subtitle="Vagas ativas" styleP={styles.statsP}/>
+        <StatsApp title="1.2K+" subtitle="Prestadores" styleP={styles.statsP}/>
+        <StatsApp title="5K+" subtitle="Úsuarios" styleP={styles.statsP}/>
       </div>
     </section>
   );

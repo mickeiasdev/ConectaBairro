@@ -1,18 +1,18 @@
 // styles
 import styles from "../styles/Buttons.module.css";
 
-export function PrimaryButton({ title, icon: Icon, className }) {
+export function PrimaryButton({ title, icon: Icon, style }) {
   return (
-    <button className={`${styles.primaryButton} ${className}`}>
+    <button className={`${styles.primaryButton} ${style}`}>
       {title}
       {Icon && <Icon className={styles.primaryIcon} />}
     </button>
   );
 }
 
-export function SecundaryButton({ title, icon: Icon, className }) {
+export function SecundaryButton({ title, icon: Icon, style }) {
   return (
-    <button className={`${styles.secundaryButton} ${className}`}>
+    <button className={`${styles.secundaryButton} ${style}`}>
       {title}
       {Icon && <Icon className={styles.secundaryIcon} />}
     </button>
