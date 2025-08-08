@@ -1,17 +1,17 @@
 // components
-import Logo from "../components/Logo";
-import { PrimaryButton, SecundaryButton } from "../components/Buttons";
-import StatsApp from "../components/StatsApp";
+import Logo from "../Logo";
+import { PrimaryButton, SecundaryButton } from "../Buttons";
+import StatsApp from "../StatsApp";
 
 //icons
 import { BiRightArrowAlt } from "react-icons/bi";
 
 // styles
-import styles from "../styles/LandingPageHero.module.css";
+import styles from "../../styles/landingpage/Hero.module.css";
 
-export default function LandingPageHero() {
+export default function Hero({className}) {
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} ${className}`}>
       <Logo style={styles.logo}/>
       <div className={styles.titles}>
         <h1 className={styles.title}>Conecta</h1>
@@ -33,9 +33,9 @@ export default function LandingPageHero() {
         />
       </div>
       <div className={styles.stats}>
-        <StatsApp title="500+" subtitle="Vagas ativas" styleP={styles.statsP}/>
-        <StatsApp title="1.2K+" subtitle="Prestadores" styleP={styles.statsP}/>
-        <StatsApp title="5K+" subtitle="Úsuarios" styleP={styles.statsP}/>
+        <StatsApp title="500+" subtitle="Vagas ativas" />
+        <StatsApp title="1.2K+" subtitle="Prestadores" />
+        <StatsApp title="5K+" subtitle="Úsuarios" />
       </div>
     </section>
   );

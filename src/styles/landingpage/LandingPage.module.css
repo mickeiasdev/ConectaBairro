@@ -10,7 +10,6 @@
 }
 
 /* Gerais */
-.features,
 .tutorial,
 .feedbacks,
 .cta {
@@ -21,7 +20,6 @@
   justify-content: center;
 }
 
-.features,
 .tutorial,
 .feedbacks {
   padding-bottom: 7.5rem;

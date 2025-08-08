@@ -37,6 +37,12 @@
   --secundary-gradient: linear-gradient(90deg, var(--primary-color-400) 25%, var(--primary-color-600) 100%);
   --secundary-gradient-light: linear-gradient(90deg, var(--primary-color-300) 25%, var(--primary-color-500) 100%);
   
-  --title-lg: 3.5rem
+  --text-xxlg: 3.5rem;
+  --text-xlg: 3rem;
+  --text-lg: 2.5rem;
+  --text-md: 2rem;
+  --text-sm: .75rem;
+  --text-xsm: .5rem;
 
+  
 }
