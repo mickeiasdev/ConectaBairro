@@ -43,10 +43,8 @@
   line-height: 1.5;
 }
 
-
 /* Lista genérica (Features, Tutorial, Feedbacks) */
 
-.tutorialSteps,
 .feedbackList {
   display: flex;
   flex-direction: column;
@@ -55,8 +53,6 @@
   width: 100%;
 }
 
-/* Cards padrão */
-.featureItem,
 .feedbackItem {
   display: flex;
   flex-direction: column;
@@ -67,55 +63,18 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.2s ease-in-out;
 }
-.featureItem:hover,
+
 .feedbackItem:hover {
   background: var(--glass-hover);
 }
-.featureItem h3,
-.tutorialStep h3 {
-  margin-top: 1rem;
-}
-.featureIcon {
-  font-size: 3rem;
-  padding: 0.75rem;
-  background: var(--secundary-gradient);
-  border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out;
-}
-.featureItem:hover .featureIcon {
-  scale: 1.05;
-}
+
 .feedbackIcon {
   font-size: 2.5rem;
   padding: 0.5rem;
   background: var(--secundary-gradient);
   border-radius: 100%;
 }
-.featureItem p,
-.tutorialStep p {
-  font-size: 0.7rem;
-  line-height: 1.5;
-  color: var(--gray-200);
-}
-.tutorialStep {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.stepNumber {
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--secundary-gradient);
-  border-radius: 100%;
-  margin-top: 1rem;
-}
-.tutorialStep p {
-  max-width: 20rem;
-}
+
 .feedbackItem {
   gap: 1rem;
 }
