@@ -12,8 +12,9 @@ export default function Feature({ className }) {
     <section className={`${styles.features} ${className}`}>
       <h2 className={styles.title}>Tudo que você precisa em um só lugar</h2>
       <p className={styles.subtitle}>
-        Conecte-se com pessoas da sua comunidade e encontre oportunidades de
-        trabalho e serviços locais.
+        Conecte-se com pessoas da sua comunidade, descubra novas oportunidades
+        de trabalho e serviços próximos, fortaleça laços com vizinhos e
+        transforme sua região em um lugar mais unido, colaborativo e próspero.
       </p>
       <div className={styles.list}>
         <div className={styles.item}>

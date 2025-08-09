@@ -14,8 +14,8 @@ export default function LandingPageTutorial({ className }) {
           <div className={styles.number}>1</div>
           <h3 className={styles.title}>Crie sua conta</h3>
           <p>
-            Cadastre-se rapidamente com seu e-mail ou conta social. É grátis e
-            fácil.
+            Cadastre-se rapidamente com seu e-mail ou conta social. Venha fazer
+            parte da nossa comunidade. Isso nunca foi tão fácil.
           </p>
         </div>
         <div className={styles.step}>

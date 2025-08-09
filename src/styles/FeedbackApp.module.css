@@ -10,6 +10,7 @@
 }
 
 .container:hover {
+  background: var(--glass-hover);
   border: 1px solid var(--glass-border-hover);
 }
 
