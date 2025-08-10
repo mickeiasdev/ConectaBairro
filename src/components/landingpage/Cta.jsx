@@ -13,7 +13,7 @@ export default function Cta({ className }) {
         Junte-se a milhares de pessoas que já estão aproveitando as
         oportunidades locais.
       </p>
-      <PrimaryButton style={styles.button} title="Começar agora" />
+      <PrimaryButton style={styles.button} title="Criar minha conta" />
       <div className={styles.stamps}>
         <Stamp title="100% Gratuito" />
         <Stamp title="Sem compromisso" />

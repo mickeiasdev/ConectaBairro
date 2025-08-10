@@ -1,4 +1,5 @@
 // components
+import {Header} from "../landingpage/Header";
 import Logo from "../Logo";
 import { PrimaryButton, SecundaryButton } from "../Buttons";
 import StatsApp from "../StatsApp";
@@ -12,6 +13,7 @@ import styles from "../../styles/landingpage/Hero.module.css";
 export default function Hero({className}) {
   return (
     <section className={`${styles.hero} ${className}`}>
+      <Header className={styles.header} />
       <Logo style={styles.logo}/>
       <div className={styles.titles}>
         <h1 className={styles.title}>Conecta</h1>
