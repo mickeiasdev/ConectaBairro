@@ -45,6 +45,10 @@
   color: var(--gray-500);
 }
 
+.button {
+  width: 10rem;
+}
+
 .menu {
   display: none;
   font-size: 1.5rem;

@@ -10,16 +10,16 @@ import { SlMenu } from "react-icons/sl";
 import styles from "../../styles/landingpage/Header.module.css";
 
 export function Header({ className, home, features, tutorial, feedback }) {
-  const [nav, useNav] = useState();
-  const [content, useContent] = useState();
+  const [nav, setNav] = useState();
+  const [content, setContent] = useState();
 
   const handleMenu = () => {
     if (nav === `${styles.nav}`) {
-      useNav(`${styles.nav} ${styles.active}`);
-      useContent(`${styles.content} ${styles.active}`);
+      setNav(`${styles.nav} ${styles.active}`);
+      setContent(`${styles.content} ${styles.active}`);
     } else {
-      useNav(`${styles.nav}`);
-      useContent(`${styles.content}`);
+      setNav(`${styles.nav}`);
+      setContent(`${styles.content}`);
     }
   };
 
