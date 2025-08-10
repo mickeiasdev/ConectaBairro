@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 // components
 import { PrimaryButton } from "../../components/Buttons";
@@ -28,11 +29,18 @@ export function Header({ className }) {
       <SlMenu className={styles.menu} onClick={handleMenu} />
       <div className={nav}>
         <div>
-          <button className={content}>Inicio</button>
-          <button className={content}>Serviços</button>
-          <button className={content}>Como usar</button>
-          <button className={content}>O que dizem</button>
-          <button className={content}>Outros</button>
+          <Link to="feature" smooth={true} duration={500}>
+            <button className={content}>Serviços</button>
+          </Link>
+          <Link to="tutorial" smooth={true} duration={500}>
+            <button className={content}>Como usar</button>
+          </Link>
+          <Link to="feedback" smooth={true} duration={500}>
+            <button className={content}>O que dizem</button>
+          </Link>
+          <Link to="others" smooth={true} duration={500}>
+            <button className={content}>Outros</button>
+          </Link>
         </div>
         <PrimaryButton title="Entrar" style={`${styles.button} ${content}`} />
       </div>

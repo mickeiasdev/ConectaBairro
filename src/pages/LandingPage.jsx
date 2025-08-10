@@ -15,11 +15,19 @@ export default function LandingPage() {
   return (
     <div className={styles.main}>
       <Hero />
-      <Feature />
-      <Tutorial />
-      <Feedback />
+      <Element name="feature">
+        <Feature />
+      </Element>
+      <Element name="tutorial">
+        <Tutorial />
+      </Element>
+      <Element name="feedback">
+        <Feedback />
+      </Element>
       <Cta />
-      <Footer />
+      <Element name="others">
+        <Footer />
+      </Element>
     </div>
   );
 }
