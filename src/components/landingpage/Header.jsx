@@ -9,7 +9,7 @@ import { SlMenu } from "react-icons/sl";
 // styles
 import styles from "../../styles/landingpage/Header.module.css";
 
-export function Header({ className, home, features, tutorial, feedback }) {
+export function Header({ className }) {
   const [nav, setNav] = useState(`${styles.nav}`);
   const [content, setContent] = useState();
 
@@ -28,18 +28,11 @@ export function Header({ className, home, features, tutorial, feedback }) {
       <SlMenu className={styles.menu} onClick={handleMenu} />
       <div className={nav}>
         <div>
-          <button className={content} onClick={home}>
-            Inicio
-          </button>
-          <button className={content} onClick={features}>
-            Serviços
-          </button>
-          <button className={content} onClick={tutorial}>
-            Como usar
-          </button>
-          <button className={content} onClick={feedback}>
-            Oque dizem
-          </button>
+          <button className={content}>Inicio</button>
+          <button className={content}>Serviços</button>
+          <button className={content}>Como usar</button>
+          <button className={content}>O que dizem</button>
+          <button className={content}>Outros</button>
         </div>
         <PrimaryButton title="Entrar" style={`${styles.button} ${content}`} />
       </div>
