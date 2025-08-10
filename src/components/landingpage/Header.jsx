@@ -29,13 +29,13 @@ export function Header({ className }) {
       <SlMenu className={styles.menu} onClick={handleMenu} />
       <div className={nav}>
         <div>
-          <Link to="feature" smooth={true} duration={500}>
+          <Link to="feature" smooth={true} duration={500} offset={-100}>
             <button className={content}>Serviços</button>
           </Link>
-          <Link to="tutorial" smooth={true} duration={500}>
+          <Link to="tutorial" smooth={true} duration={500} offset={-150}>
             <button className={content}>Como usar</button>
           </Link>
-          <Link to="feedback" smooth={true} duration={500}>
+          <Link to="feedback" smooth={true} duration={500} offset={-150}>
             <button className={content}>O que dizem</button>
           </Link>
           <Link to="others" smooth={true} duration={500}>
