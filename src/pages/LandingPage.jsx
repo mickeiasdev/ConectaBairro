@@ -11,7 +11,7 @@ import { Footer } from "../components/landingpage/Footer";
 // styles
 import styles from "../styles/landingpage/LandingPage.module.css";
 
-export default function LandingPage() {
+export function LandingPage() {
   return (
     <div className={styles.main}>
       <Hero />

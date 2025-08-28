@@ -11,17 +11,14 @@ import { SlMenu } from "react-icons/sl";
 import styles from "../../styles/landingpage/Header.module.css";
 
 export function Header({ className }) {
-  const [nav, setNav] = useState(`${styles.nav}`);
-  const [content, setContent] = useState();
+  const [nav, setNav] = useState(styles.nav);
 
   const handleMenu = () => {
-    if (nav === `${styles.nav}`) {
-      setNav(`${styles.nav} ${styles.active}`);
-      setContent(`${styles.content} ${styles.active}`);
-    } else {
-      setNav(`${styles.nav}`);
-      setContent(`${styles.content}`);
-    }
+    setNav(item => item.includes(styles.active) ? styles.nav : `${styles.nav} ${styles.active}`)
+  };
+
+  const handleSelect = () => {
+    setNav(`${styles.nav}`);
   };
 
   return (
@@ -30,19 +27,23 @@ export function Header({ className }) {
       <div className={nav}>
         <div>
           <Link to="feature" smooth={true} duration={500} offset={-100}>
-            <button className={content}>Serviços</button>
+            <button onClick={handleSelect}>Serviços</button>
           </Link>
           <Link to="tutorial" smooth={true} duration={500} offset={-150}>
-            <button className={content}>Como usar</button>
+            <button onClick={handleSelect}>Como usar</button>
           </Link>
           <Link to="feedback" smooth={true} duration={500} offset={-150}>
-            <button className={content}>O que dizem</button>
+            <button onClick={handleSelect}>O que dizem</button>
           </Link>
           <Link to="others" smooth={true} duration={500}>
-            <button className={content}>Outros</button>
+            <button onClick={handleSelect}>Outros</button>
           </Link>
         </div>
-        <PrimaryButton title="Entrar" style={`${styles.button} ${content}`} />
+        <PrimaryButton
+          onClick={handleSelect}
+          title="Entrar"
+          style={`${styles.button}`}
+        />
       </div>
     </div>
   );
