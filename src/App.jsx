@@ -1,17 +1,17 @@
 import {LandingPage} from "./pages/LandingPage";
 import { Login } from "./components/Login";
+import { Register } from "./components/Register";
 import { Home } from "./pages/Home";
 
 import "./global.css";
-import { Register } from "./components/Register";
 
 function App() {
   return (
     <>
-      {/* <LandingPage /> */}
+      <LandingPage />
       {/* <Login/> */}
       {/* <Register/> */}
-      <Home/>
+      {/* <Home/> */}
     </>
   );
 }
