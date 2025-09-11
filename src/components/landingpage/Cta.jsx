@@ -1,11 +1,8 @@
-// components
 import Stamp from "../Stamp";
 import { PrimaryButton } from "../Buttons";
-
-// style
 import styles from "../../styles/landingpage/Cta.module.css";
 
-export default function Cta({ className, onRegisterClick }) {
+export function Cta({ className, onRegisterClick }) {
   return (
     <section className={`${styles.cta} ${className}`}>
       <h2 className={styles.title}>Pronto para começar?</h2>

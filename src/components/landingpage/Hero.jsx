@@ -5,7 +5,7 @@ import StatsApp from "../StatsApp";
 import { BiRightArrowAlt } from "react-icons/bi";
 import styles from "../../styles/landingpage/Hero.module.css";
 
-export default function Hero({ className, onRegisterClick, onLoginClick }) {
+export function Hero({ className, onRegisterClick, onLoginClick }) {
   return (
     <section className={`${styles.hero} ${className}`}>
       <Header className={styles.header} onLoginClick={onLoginClick} />

@@ -1,7 +1,4 @@
-// styles
 import styles from "../../styles/landingpage/Footer.module.css";
-
-// icons
 import {
   FaInstagram,
   FaFacebookF,

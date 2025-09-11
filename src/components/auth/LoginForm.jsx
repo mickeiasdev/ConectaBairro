@@ -1,9 +1,8 @@
 import { useState } from "react";
 import styles from "../../styles/auth/LoginRegister.module.css";
-
 import { useNavigate } from "react-router-dom";
 
-export default function LoginForm({ onSuccess }) {
+export function LoginForm({ onSuccess }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");

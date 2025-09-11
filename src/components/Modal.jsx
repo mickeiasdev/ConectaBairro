@@ -1,6 +1,6 @@
 import styles from "../styles/Modal.module.css";
 
-export default function Modal({ children, onClose }) {
+export function Modal({ children, onClose }) {
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();

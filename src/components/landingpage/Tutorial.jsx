@@ -1,7 +1,6 @@
-// style
 import styles from "../../styles/landingpage/Tutorial.module.css";
 
-export default function LandingPageTutorial({ className }) {
+export function Tutorial({ className }) {
   return (
     <section className={`${styles.tutorial} ${className}`}>
       <h2 className={styles.title}>Como funciona?</h2>

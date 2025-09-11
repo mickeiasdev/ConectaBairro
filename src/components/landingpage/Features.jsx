@@ -1,13 +1,10 @@
-// icons
 import { IoLocationOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { LuShield } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
 import { FiUsers } from "react-icons/fi";
-
-// styles
 import styles from "../../styles/landingpage/Feature.module.css";
 
-export default function Feature({ className }) {
+export function Feature({ className }) {
   return (
     <section className={`${styles.features} ${className}`}>
       <h2 className={styles.title}>Tudo que você precisa em um só lugar</h2>

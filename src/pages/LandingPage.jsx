@@ -1,15 +1,14 @@
-
 import { useState } from "react";
 import { Element } from "react-scroll";
-import Hero from "../components/landingpage/Hero";
-import Feature from "../components/landingpage/Features";
-import Tutorial from "../components/landingpage/Tutorial";
-import Feedback from "../components/landingpage/Feedback";
-import Cta from "../components/landingpage/Cta";
+import { Hero } from "../components/landingpage/Hero";
+import { Feature } from "../components/landingpage/Features";
+import { Tutorial } from "../components/landingpage/Tutorial";
+import { Feedback } from "../components/landingpage/Feedback";
+import { Cta } from "../components/landingpage/Cta";
 import { Footer } from "../components/landingpage/Footer";
-import Modal from "../components/Modal";
-import LoginForm from "../components/auth/LoginForm";
-import RegisterForm from "../components/auth/RegisterForm";
+import { Modal } from "../components/Modal";
+import { LoginForm } from "../components/auth/LoginForm";
+import { RegisterForm } from "../components/auth/RegisterForm";
 import styles from "../styles/landingpage/LandingPage.module.css";
 
 export function LandingPage() {
@@ -32,32 +31,36 @@ export function LandingPage() {
       <Element name="feedback">
         <Feedback />
       </Element>
-      <Cta  onRegisterClick={() => setModalOpen("register")} />
+      <Cta onRegisterClick={() => setModalOpen("register")} />
       <Element name="others">
         <Footer />
       </Element>
 
       {modalOpen && (
-  <Modal onClose={closeModal}>
-    {modalOpen === 'login' ? (
-      <LoginForm onSuccess={(next) => {
-        if (next === 'register') {
-          setModalOpen('register'); 
-        } else {
-          closeModal();
-        }
-      }} />
-    ) : (
-      <RegisterForm onSuccess={(next) => {
-        if (next === 'login') {
-          setModalOpen('login');
-        } else {
-          closeModal();
-        }
-      }} />
-    )}
-  </Modal>
-)}
+        <Modal onClose={closeModal}>
+          {modalOpen === "login" ? (
+            <LoginForm
+              onSuccess={(next) => {
+                if (next === "register") {
+                  setModalOpen("register");
+                } else {
+                  closeModal();
+                }
+              }}
+            />
+          ) : (
+            <RegisterForm
+              onSuccess={(next) => {
+                if (next === "login") {
+                  setModalOpen("login");
+                } else {
+                  closeModal();
+                }
+              }}
+            />
+          )}
+        </Modal>
+      )}
     </div>
   );
 }

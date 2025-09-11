@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../../styles/auth/LoginRegister.module.css";
 
-export default function RegisterForm({ onSuccess }) {
+export function RegisterForm({ onSuccess }) {
   const navigate = useNavigate();
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");

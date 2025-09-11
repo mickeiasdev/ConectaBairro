@@ -1,13 +1,8 @@
-// components
 import FeedbackApp from "../FeedbackApp";
-
-// style
 import styles from "../../styles/landingpage/Feedback.module.css";
-
-// data
 import { arrFeedbackApp } from "../../arrays/arrays";
 
-export default function Feedback({ className }) {
+export function Feedback({ className }) {
   return (
     <section className={`${styles.feedbacks} ${className}`}>
       <h2 className={styles.title}>O que nossos usuários dizem</h2>

@@ -13,9 +13,9 @@ export default function AvaliatorStars({
     if (rating <= amount) {
       for (let i = 0; i < amount; i++) {
         if (i < rating) {
-          res.push(<FaStar size={size} color={positive} />);
+          res.push(<FaStar key={i} size={size} color={positive} />);
         } else {
-          res.push(<FaStar size={size} color={negative} />);
+          res.push(<FaStar key={i} size={size} color={negative} />);
         }
       }
       return res;
