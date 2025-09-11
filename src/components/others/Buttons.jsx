@@ -1,5 +1,5 @@
 // styles
-import styles from "../styles/Buttons.module.css";
+import styles from "../../styles/others/Buttons.module.css";
 
 export function PrimaryButton({ title, icon: Icon, style, onClick }) {
   return (

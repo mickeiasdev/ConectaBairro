@@ -1,7 +1,7 @@
 import AvaliatorStars from "./AvaliatorStars";
 import { FiUser } from "react-icons/fi";
 
-import styles from "../styles/FeedbackApp.module.css"
+import styles from "../../styles/others/FeedbackApp.module.css"
 
 export default function FeedbackApp({
   rating = 5,

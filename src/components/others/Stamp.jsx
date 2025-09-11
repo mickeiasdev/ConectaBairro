@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 
-import styles from "../styles/Stamps.module.css";
+import styles from "../../styles/others/Stamps.module.css";
 
 export default function Stamp({ title, style }) {
   return (

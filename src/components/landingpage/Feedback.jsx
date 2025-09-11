@@ -1,4 +1,4 @@
-import FeedbackApp from "../FeedbackApp";
+import FeedbackApp from "../others/FeedbackApp";
 import styles from "../../styles/landingpage/Feedback.module.css";
 import { arrFeedbackApp } from "../../arrays/arrays";
 

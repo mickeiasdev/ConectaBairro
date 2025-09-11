@@ -1,4 +1,4 @@
-import styles from "../styles/Modal.module.css";
+import styles from "../../styles/others/Modal.module.css";
 
 export function Modal({ children, onClose }) {
   const handleBackdropClick = (e) => {

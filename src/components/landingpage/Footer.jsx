@@ -5,7 +5,7 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-import Logo from "../Logo";
+import Logo from "../others/Logo";
 
 export function Footer() {
   return (

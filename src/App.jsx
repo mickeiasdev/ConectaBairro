@@ -1,25 +1,58 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import { LandingPage } from "./pages/LandingPage";
 import { HomePage } from "./pages/HomePage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { NotificationsPage } from "./pages/NotificationsPage";
+import { SettingsPage } from "./pages/SettingsPage";
+
+import PrivateRoute from "./PrivateRoute";
+
 import "./global.css";
 
-export default function App() {
-  const userLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
-
+function App() {
   return (
     <Router>
       <Routes>
+        {/* Public route */}
         <Route path="/" element={<LandingPage />} />
+
+        {/* Protected routes */}
         <Route
           path="/home"
-          element={userLogado ? <HomePage /> : <Navigate to="/" replace />}
+          element={
+            <PrivateRoute>
+              <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <PrivateRoute>
+              <ServicesPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/notifications"
+          element={
+            <PrivateRoute>
+              <NotificationsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <PrivateRoute>
+              <SettingsPage />
+            </PrivateRoute>
+          }
         />
       </Routes>
     </Router>
   );
 }
+
+export default App;

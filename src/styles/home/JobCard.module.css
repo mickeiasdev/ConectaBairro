@@ -1,0 +1,46 @@
+.card {
+  background: var(--white);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: var(--primary-color-600);
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.salary {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.applyButton {
+  margin-top: auto;
+  padding: 0.5rem;
+  background: var(--secundary-gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.applyButton:hover {
+  background: var(--secundary-gradient-light);
+}

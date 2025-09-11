@@ -1,7 +1,7 @@
 import { Header } from "../landingpage/Header";
-import Logo from "../Logo";
-import { PrimaryButton, SecundaryButton } from "../Buttons";
-import StatsApp from "../StatsApp";
+import Logo from "../others/Logo";
+import { PrimaryButton, SecundaryButton } from "../others/Buttons";
+import StatsApp from "../others/StatsApp";
 import { BiRightArrowAlt } from "react-icons/bi";
 import styles from "../../styles/landingpage/Hero.module.css";
 

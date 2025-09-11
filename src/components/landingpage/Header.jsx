@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { PrimaryButton } from "../../components/Buttons";
+import { PrimaryButton } from "../../components/others/Buttons";
 import { SlMenu } from "react-icons/sl";
 import styles from "../../styles/landingpage/Header.module.css";
 

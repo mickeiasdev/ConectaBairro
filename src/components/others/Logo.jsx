@@ -1,5 +1,5 @@
 // style
-import styles from "../styles/Logo.module.css"
+import styles from "../../styles/others/Logo.module.css";
 
 // icons
 import { FiDollarSign } from "react-icons/fi";

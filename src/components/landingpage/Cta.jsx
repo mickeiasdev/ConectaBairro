@@ -1,5 +1,5 @@
-import Stamp from "../Stamp";
-import { PrimaryButton } from "../Buttons";
+import Stamp from "../others/Stamp";
+import { PrimaryButton } from "../others/Buttons";
 import styles from "../../styles/landingpage/Cta.module.css";
 
 export function Cta({ className, onRegisterClick }) {

@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  background: var(--white);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.link {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--primary-color-dark);
+  cursor: pointer;
+}
+
+.active {
+  font-size: 0.9rem;
+  color: var(--primary-color-600);
+  font-weight: 600;
+}

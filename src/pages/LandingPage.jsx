@@ -6,7 +6,7 @@ import { Tutorial } from "../components/landingpage/Tutorial";
 import { Feedback } from "../components/landingpage/Feedback";
 import { Cta } from "../components/landingpage/Cta";
 import { Footer } from "../components/landingpage/Footer";
-import { Modal } from "../components/Modal";
+import { Modal } from "../components/others/Modal";
 import { LoginForm } from "../components/auth/LoginForm";
 import { RegisterForm } from "../components/auth/RegisterForm";
 import styles from "../styles/landingpage/LandingPage.module.css";

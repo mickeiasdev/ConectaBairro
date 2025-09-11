@@ -1,5 +1,5 @@
 // styles
-import styles from "../styles/StatsApp.module.css";
+import styles from "../../styles/others/StatsApp.module.css";
 
 export default function StatsApp({ title, subtitle }) {
   return (
