@@ -1,19 +1,14 @@
-// components
 import { Header } from "../landingpage/Header";
 import Logo from "../Logo";
 import { PrimaryButton, SecundaryButton } from "../Buttons";
 import StatsApp from "../StatsApp";
-
-//icons
 import { BiRightArrowAlt } from "react-icons/bi";
-
-// styles
 import styles from "../../styles/landingpage/Hero.module.css";
 
-export default function Hero({ className }) {
+export default function Hero({ className, onRegisterClick, onLoginClick }) {
   return (
     <section className={`${styles.hero} ${className}`}>
-      <Header className={styles.header} />
+      <Header className={styles.header} onLoginClick={onLoginClick} />
       <Logo style={styles.logo} />
       <div className={styles.titles}>
         <h1 className={styles.title}>Conecta</h1>
@@ -28,6 +23,7 @@ export default function Hero({ className }) {
           style={styles.primaryButton}
           title="Começar agora"
           icon={BiRightArrowAlt}
+          onClick={onRegisterClick}
         />
         <SecundaryButton style={styles.secundaryButton} title="Saiba mais" />
       </div>

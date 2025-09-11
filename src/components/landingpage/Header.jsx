@@ -1,16 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-
-// components
 import { PrimaryButton } from "../../components/Buttons";
-
-// icons
 import { SlMenu } from "react-icons/sl";
-
-// styles
 import styles from "../../styles/landingpage/Header.module.css";
 
-export function Header({ className }) {
+export function Header({ className, onLoginClick }) {
   const [nav, setNav] = useState(styles.nav);
 
   const handleMenu = () => {
@@ -40,7 +34,7 @@ export function Header({ className }) {
           </Link>
         </div>
         <PrimaryButton
-          onClick={handleSelect}
+          onClick={onLoginClick}
           title="Entrar"
           style={`${styles.button}`}
         />
