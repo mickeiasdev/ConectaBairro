@@ -1,6 +1,6 @@
-import styles from "../../styles/home/HeaderHome.module.css";
+import styles from "../../styles/others/Header.module.css";
 
-export function HeaderHome({ user, onLogout }) {
+export function Header({ user, onLogout }) {
   return (
     <header className={styles.header}>
       <div className={styles.userInfo}>Olá, {user?.nome || "Usuário"}</div>

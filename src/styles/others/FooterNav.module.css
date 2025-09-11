@@ -3,7 +3,7 @@
   justify-content: space-around;
   padding: 1rem 0;
   background: var(--white);
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .link {
@@ -15,7 +15,9 @@
 }
 
 .active {
-  font-size: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
   color: var(--primary-color-600);
   font-weight: 600;
 }

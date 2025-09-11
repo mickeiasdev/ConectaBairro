@@ -1,15 +1,17 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: var(--secundary-gradient);
+  height: 100vh;
+  background: var(--primary-gradient);
   color: var(--primary-color-dark);
+  overflow: hidden;
 }
 
 .mainContent {
   flex: 1;
+  flex-direction: collumn;
+  overflow-y: auto;
   padding: 1.5rem;
-  max-width: 800px;
   margin: 0 auto;
   width: 100%;
 }
