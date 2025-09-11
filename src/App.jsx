@@ -15,8 +15,10 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<HomePage />} />
-
+        <Route
+          path="/home"
+          element={userLogado ? <HomePage /> : <Navigate to="/" replace />}
+        />
       </Routes>
     </Router>
   );
