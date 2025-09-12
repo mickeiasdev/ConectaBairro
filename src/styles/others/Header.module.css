@@ -1,5 +1,7 @@
 .header {
+  position: relative;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -10,7 +12,15 @@
 .userInfo {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary-color-dark);
+  color: var(--primary-color-950);
+}
+
+.type {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: var(--primary-color-800);
 }
 
 .logoutButton {

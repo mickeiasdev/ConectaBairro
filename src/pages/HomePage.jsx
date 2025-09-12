@@ -33,7 +33,7 @@ export function HomePage() {
 
   return (
     <div className={styles.pageContainer}>
-      <Header user={user} onLogout={handleLogout} />
+      <Header user={user} onLogout={handleLogout} type="Vagas"/>
 
       <main className={styles.mainContent}>
         {loading && <p>Carregando vagas...</p>}
