@@ -48,9 +48,6 @@ export function RegisterForm({ onSuccess }) {
 
   return (
     <div className={styles.container}>
-      <button className={styles.closeButton} onClick={onSuccess}>
-        ×
-      </button>
       <div className={styles.header}>
         <h2 className={styles.title}>Registro</h2>
       </div>
