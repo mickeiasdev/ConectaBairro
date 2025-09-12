@@ -1,5 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../../styles/others/FooterNav.module.css";
+import { FaUsers } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { FaLightbulb } from "react-icons/fa";
+import { FaListUl } from "react-icons/fa";
 
 export function FooterNav({ current }) {
   const navigate = useNavigate();
@@ -10,25 +14,25 @@ export function FooterNav({ current }) {
         className={current === "vagas" ? styles.active : styles.link}
         onClick={() => navigate("/home")}
       >
-        Vagas
+        <FaHome size={20} />
       </button>
       <button
         className={current === "services" ? styles.active : styles.link}
         onClick={() => navigate("/services")}
       >
-        Serviços
+        <FaUsers size={20} />
       </button>
       <button
         className={current === "notifications" ? styles.active : styles.link}
         onClick={() => navigate("/notifications")}
       >
-        Notificações
+        <FaLightbulb size={20} />
       </button>
       <button
         className={current === "settings" ? styles.active : styles.link}
         onClick={() => navigate("/settings")}
       >
-        Configurações
+        <FaListUl size={20} />
       </button>
     </footer>
   );

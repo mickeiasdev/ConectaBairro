@@ -1,14 +1,15 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  padding: 1rem 0;
   background: var(--white);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .link {
   background: none;
+  line-height: 0;
   border: none;
+  padding: 1.5rem;
   font-size: 0.9rem;
   color: var(--primary-color-dark);
   cursor: pointer;
@@ -16,8 +17,10 @@
 
 .active {
   background: none;
+  line-height: 0;
   border: none;
-  font-size: 1.1rem;
+  padding: 1.5rem;
+  scale: 1.2;
   color: var(--primary-color-600);
   font-weight: 600;
 }
