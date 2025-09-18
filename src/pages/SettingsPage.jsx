@@ -2,11 +2,18 @@ import { FooterNav } from "../components/others/FooterNav";
 import styles from "../styles/home/HomePage.module.css";
 
 export function SettingsPage() {
-  return (
-    <div className={styles.pageContainer}>
+ const navigate = useNavigate();
+   const handleLogout = () => {
+     localStorage.removeItem("usuarioLogado");
+     navigate("/");
+   };
+ 
+   return (
+     <div className={styles.pageContainer}>
+       <Header onLogout={handleLogout} type="Prestadores" />
+       
       <main className={styles.mainContent}>
-        <h2>Settings</h2>
-        <p>...</p>
+        <h2>Em construção...</h2>
       </main>
       <FooterNav current="settings" />
     </div>

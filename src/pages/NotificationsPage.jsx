@@ -14,8 +14,7 @@ export function NotificationsPage() {
     <div className={styles.pageContainer}>
       <Header onLogout={handleLogout} type="Notificações" />
       <main className={styles.mainContent}>
-        <h2>Notifications</h2>
-        <p>...</p>
+        <h2>Em construção...</h2>
       </main>
       <FooterNav current="notifications" />
     </div>
