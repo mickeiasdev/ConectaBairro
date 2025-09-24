@@ -1,4 +1,4 @@
-import {JobCard} from "./JobCard";
+import JobCard from "./JobCard";
 import styles from "../../styles/home/JobList.module.css";
 
 export function JobList({ jobs }) {

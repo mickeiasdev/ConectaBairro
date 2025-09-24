@@ -1,49 +1,82 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header } from "../components/others/Header";
-import { JobList } from "../components/home/JobList";
-import { FooterNav } from "../components/others/FooterNav";
 import styles from "../styles/home/HomePage.module.css";
+import { Header } from "../components/others/Header";
+import { FooterNav } from "../components/others/FooterNav";
+import JobCard from "../components/home/JobCard";
+import JobDetail from "../components/home/JobDetail";
 
 export function HomePage() {
   const navigate = useNavigate();
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  const user = JSON.parse(localStorage.getItem("usuarioLogado"));
+  const [selectedJob, setSelectedJob] = useState(null);
+  
+  // Use a state variable for the user
+  const [user, setUser] = useState(null); 
 
   useEffect(() => {
-    if (!user) {
+    // Check for user on component mount
+    const storedUser = JSON.parse(localStorage.getItem("usuarioLogado"));
+    setUser(storedUser);
+
+    if (!storedUser) {
       navigate("/");
       return;
     }
 
+    setLoading(true);
     fetch("https://remotive.com/api/remote-jobs?limit=10")
       .then((res) => res.json())
-      .then((data) => setJobs(data.jobs))
-      .catch(() => setError("Erro ao carregar vagas"))
-      .finally(() => setLoading(false));
-  }, [navigate, user]);
-
+      .then((data) => {
+        setJobs(data.jobs);
+        setError(null);
+      })
+      .catch(() => {
+        setError("Erro ao carregar vagas");
+        setJobs([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [navigate]);
+  
   const handleLogout = () => {
     localStorage.removeItem("usuarioLogado");
     navigate("/");
   };
 
+  const handleJobSelect = (job) => {
+    setSelectedJob(job);
+  };
+
+  const handleCloseDetails = () => {
+    setSelectedJob(null);
+  };
+
+  const renderMainContent = () => {
+    if (loading) {
+      return <p>Carregando vagas...</p>;
+    }
+    if (error) {
+      return <p className={styles.error}>{error}</p>;
+    }
+    if (selectedJob) {
+      return <JobDetail job={selectedJob} onClose={handleCloseDetails} />;
+    }
+    if (jobs.length > 0) {
+      return jobs.map((job) => (
+        <JobCard key={job.id} job={job} onCardClick={handleJobSelect} />
+      ));
+    }
+    return <p>Nenhuma vaga encontrada.</p>;
+  };
+
   return (
     <div className={styles.pageContainer}>
-      <Header user={user} onLogout={handleLogout} type="Vagas"/>
-
-      <main className={styles.mainContent}>
-        {loading && <p>Carregando vagas...</p>}
-        {error && <p className={styles.error}>{error}</p>}
-        {!loading && !error && jobs.length === 0 && (
-          <p>Nenhuma vaga encontrada.</p>
-        )}
-        {!loading && !error && <JobList jobs={jobs} />}
-      </main>
-
+      <Header user={user} onLogout={handleLogout} type="Vagas" />
+      <main className={styles.mainContent}>{renderMainContent()}</main>
       <FooterNav current="vagas" />
     </div>
   );

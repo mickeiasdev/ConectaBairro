@@ -1,12 +1,11 @@
 import styles from "../../styles/others/Header.module.css";
+import { FiLogOut } from "react-icons/fi";
 
 export function Header({ onLogout, type = "" }) {
   return (
     <header className={styles.header}>
       <h2 className={styles.type}>{type}</h2>
-      <button className={styles.logoutButton} onClick={onLogout}>
-        Logout
-      </button>
+      <FiLogOut size={40} className={styles.logoutButton} onClick={onLogout}/>
     </header>
   );
 }

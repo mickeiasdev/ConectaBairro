@@ -7,6 +7,7 @@
   padding: 1rem 2rem;
   background: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
 }
 
 .userInfo {
@@ -24,14 +25,11 @@
 }
 
 .logoutButton {
-  padding: 0.5rem 1rem;
-  background: var(--secundary-gradient);
-  color: var(--white);
-  border: none;
-  border-radius: 0.5rem;
+  color: red;
   cursor: pointer;
+  padding: .5rem;
 }
 
 .logoutButton:hover {
-  background: var(--secundary-gradient-light);
+  color: darkred;
 }

@@ -1,0 +1,77 @@
+.detailContainer {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    color: #333;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton:hover {
+    background: #c0392b;
+}
+
+.title {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: normal;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.location, .type {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.description strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.applyButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: var(--primary-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.applyButton:hover {
+    background: var(--primary-gradient-light);
+}

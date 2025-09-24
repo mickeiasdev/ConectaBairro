@@ -14,10 +14,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Public route */}
         <Route path="/" element={<LandingPage />} />
 
-        {/* Protected routes */}
         <Route
           path="/home"
           element={
