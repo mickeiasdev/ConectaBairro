@@ -1,8 +1,12 @@
 import styles from "../../styles/home/JobCard.module.css";
+// Estilos do card
 
-export default function JobCard({ job, onCardClick }) {
+export function JobCard({ job, onCardClick }) {
+  // job = dados da vaga
+
   const handleViewJob = () => {
     onCardClick(job);
+    // Chama função do pai com a vaga
   };
 
   return (
@@ -16,17 +20,14 @@ export default function JobCard({ job, onCardClick }) {
         <p>
           <strong>Tipo:</strong> {job.job_type || "Não Informado"}
         </p>
-
         <p>
           <strong>Local:</strong> {job.candidate_required_location}
         </p>
-
         <p>
           <strong>Salário:</strong> {job.salary}
         </p>
-
         <p>
-          <strong>Data:</strong>
+          <strong>Data:</strong>{" "}
           {new Date(job.publication_date).toLocaleDateString()}
         </p>
       </div>

@@ -1,6 +1,7 @@
-import { FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa"; 
+// Ícone de estrela
 
-export default function AvaliatorStars({
+export function AvaliatorStars({
   size,
   rating,
   amount,
@@ -13,21 +14,26 @@ export default function AvaliatorStars({
     if (rating <= amount) {
       for (let i = 0; i < amount; i++) {
         if (i < rating) {
-          res.push(<FaStar key={i} size={size} color={positive} />);
+          res.push(<FaStar key={i} size={size} color={positive} />); 
+          // Estrela cheia
         } else {
-          res.push(<FaStar key={i} size={size} color={negative} />);
+          res.push(<FaStar key={i} size={size} color={negative} />); 
+          // Estrela vazia
         }
       }
       return res;
     } else {
-      throw Error("A quantidade tem que ser maior ou igual a avaliacao");
+      throw Error("A quantidade tem que ser maior ou igual a avaliacao"); 
+      // Validação
     }
   }
 
   return (
     <div>
-      <span>{generate()}</span>
-      <span>{title}</span>
+      <span>{generate()}</span> 
+      {/* Estrelas */}
+      <span>{title}</span> 
+      {/* Título da avaliação */}
     </div>
   );
 }

@@ -1,20 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+// Ferramentas de rotas
 
 import { LandingPage } from "./pages/LandingPage";
 import { HomePage } from "./pages/HomePage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { NotificationsPage } from "./pages/NotificationsPage";
-import SettingsPage from "./pages/SettingsPage";
+import SettingsPage from "./pages/SettingsPage"; 
+// Páginas do app
 
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute"; 
+// Protege rotas
 
-import "./global.css";
+import "./global.css"; 
+// Estilos globais
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} /> 
+        {/* Página inicial */}
 
         <Route
           path="/home"
@@ -23,7 +28,9 @@ function App() {
               <HomePage />
             </PrivateRoute>
           }
-        />
+        /> 
+        {/* Home protegida */}
+
         <Route
           path="/services"
           element={
@@ -31,27 +38,29 @@ function App() {
               <ServicesPage />
             </PrivateRoute>
           }
-        />
+        /> 
+        {/* Serviços protegida */}
+
         <Route
           path="/notifications"
           element={
             <PrivateRoute>
-              <NotificationsPage />{" "}
+              <NotificationsPage />
             </PrivateRoute>
           }
-        />
+        /> 
+        {/* Notificações protegida */}
+
         <Route
           path="/settings"
           element={
             <PrivateRoute>
-              {" "}
               <SettingsPage />
             </PrivateRoute>
           }
-        />
+        /> 
+        {/* Configurações protegida */}
       </Routes>
     </Router>
   );
 }
-
-export default App;
