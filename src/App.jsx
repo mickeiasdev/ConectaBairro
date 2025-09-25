@@ -4,7 +4,7 @@ import { LandingPage } from "./pages/LandingPage";
 import { HomePage } from "./pages/HomePage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { NotificationsPage } from "./pages/NotificationsPage";
-import { SettingsPage } from "./pages/SettingsPage";
+import SettingsPage from "./pages/SettingsPage";
 
 import PrivateRoute from "./PrivateRoute";
 
@@ -36,7 +36,7 @@ function App() {
           path="/notifications"
           element={
             <PrivateRoute>
-              <NotificationsPage />
+              <NotificationsPage />{" "}
             </PrivateRoute>
           }
         />
@@ -44,6 +44,7 @@ function App() {
           path="/settings"
           element={
             <PrivateRoute>
+              {" "}
               <SettingsPage />
             </PrivateRoute>
           }

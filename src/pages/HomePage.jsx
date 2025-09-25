@@ -13,11 +13,9 @@ export function HomePage() {
   const [error, setError] = useState(null);
   const [selectedJob, setSelectedJob] = useState(null);
   
-  // Use a state variable for the user
   const [user, setUser] = useState(null); 
 
   useEffect(() => {
-    // Check for user on component mount
     const storedUser = JSON.parse(localStorage.getItem("usuarioLogado"));
     setUser(storedUser);
 

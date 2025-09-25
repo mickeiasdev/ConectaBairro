@@ -1,0 +1,114 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--white);
+    width: 100%;
+}
+
+.profileSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.profilePicContainer {
+    position: relative; /* Essencial para o overlay */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--gray-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.editOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo escura e transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease-in-out;
+    color: var(--white); /* Cor do ícone */
+}
+
+/* Efeito de hover no container da foto */
+.profilePicContainer:hover .editOverlay {
+    opacity: 1; /* Torna o overlay visível ao passar o mouse */
+}
+
+.menuList {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 20px;
+    align-self: flex-start; 
+}
+
+.menuItem {
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    transition: color 0.2s ease-in-out;
+    text-align: left;
+}
+
+.menuItem:hover {
+    color: var(--primary-color-500);
+}
+
+.logoutContainer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: auto;
+    align-self: flex-start; 
+}
+
+.logoutButton {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--primary-color-500);
+    background-color: transparent;
+    border-radius: 8px;
+    color: var(--primary-color-500);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.logoutButton:hover {
+    background-color: var(--primary-color-500);
+    color: var(--white);
+}
