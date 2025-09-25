@@ -13,10 +13,8 @@ export function ServicesPage() {
   return (
     <div className={styles.pageContainer}>
       <Header onLogout={handleLogout} type="Prestadores de Serviços" />
-
       <main className={styles.mainContent}>
-        <h2>Services</h2>
-        <p>...</p>
+        <h2>Em construção...</h2>
       </main>
       <FooterNav current="services" />
     </div>
