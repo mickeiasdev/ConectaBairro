@@ -4,7 +4,7 @@ import { Header } from "../components/others/Header";
 // Header com título e botão de logout
 import { FooterNav } from "../components/others/FooterNav";
 // Navegação inferior
-import EditProfileModal from "../components/settings/EditProfileModal";
+import { EditProfileModal } from "../components/settings/EditProfileModal";
 // Modal para edição de perfil
 import styles from "../styles/settings/SettingsPage.module.css";
 // Estilos da página de configurações

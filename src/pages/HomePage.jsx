@@ -6,9 +6,9 @@ import { Header } from "../components/others/Header";
 // Header com título e botão de logout
 import { FooterNav } from "../components/others/FooterNav";
 // Menu inferior
-import JobCard from "../components/home/JobCard";
+import { JobCard } from "../components/home/JobCard";
 // Card de vaga
-import JobDetail from "../components/home/JobDetail";
+import { JobDetail } from "../components/home/JobDetail";
 // Detalhes da vaga selecionada
 
 export function HomePage() {
