@@ -1,4 +1,4 @@
-import FeedbackApp from "../others/FeedbackApp";
+import { FeedbackApp } from "../others/FeedbackApp";
 // Componente de feedback individual
 import styles from "../../styles/landingpage/Feedback.module.css";
 // Estilos do componente

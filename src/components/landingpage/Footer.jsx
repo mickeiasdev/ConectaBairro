@@ -7,7 +7,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 // Ícones das redes sociais
-import Logo from "../others/Logo";
+import { Logo } from "../others/Logo";
 // Logo do app
 
 export function Footer() {

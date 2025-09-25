@@ -1,4 +1,4 @@
-import Stamp from "../others/Stamp";
+import { Stamp } from "../others/Stamp";
 // Componente de selo/informação
 import { PrimaryButton } from "../others/Buttons";
 // Botão principal

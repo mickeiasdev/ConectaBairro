@@ -1,10 +1,10 @@
 import { Header } from "../landingpage/Header";
 // Header da landing page
-import Logo from "../others/Logo";
+import { Logo } from "../others/Logo";
 // Logo do app
 import { PrimaryButton, SecundaryButton } from "../others/Buttons";
 // Botões principais
-import StatsApp from "../others/StatsApp";
+import { StatsApp } from "../others/StatsApp";
 // Componente de estatísticas
 import { BiRightArrowAlt } from "react-icons/bi";
 // Ícone para botão

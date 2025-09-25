@@ -6,7 +6,7 @@ import { FiDollarSign } from "react-icons/fi";
 import { MdConnectWithoutContact } from "react-icons/md";
 // Ícone de conexão
 
-export default function Logo({ style }) {
+export function Logo({ style }) {
   return (
     <div className={`${styles.logo} ${style}`}>
       <MdConnectWithoutContact />

@@ -11,5 +11,5 @@
 }
 
 .main > :nth-child(2) {
-  margin-top: -7.5rem; /* anula o gap antes do segundo item */
+  margin-top: -7.5rem;
 }

@@ -1,13 +1,19 @@
 import { useState, useRef } from "react";
 import styles from "../../styles/settings/EditProfileModal.module.css";
+// Estilos do modal de edição de perfil
 
-const EditProfileModal = ({ user, onClose, onSave }) => {
+export function EditProfileModal({ user, onClose, onSave }) {
   const [name, setName] = useState(user.nome || "");
+  // Nome do usuário
   const [description, setDescription] = useState(user.descricao || "");
+  // Descrição
   const [skills, setSkills] = useState(user.habilidades?.join(", ") || "");
+  // Habilidades separadas por vírgula
   const [profilePic, setProfilePic] = useState(user.profilePic || null);
+  // Foto de perfil
 
   const fileInputRef = useRef(null);
+  // Referência para input de arquivo oculto
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -15,6 +21,7 @@ const EditProfileModal = ({ user, onClose, onSave }) => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setProfilePic(reader.result);
+        // Atualiza foto
       };
       reader.readAsDataURL(file);
     }
@@ -32,21 +39,27 @@ const EditProfileModal = ({ user, onClose, onSave }) => {
       profilePic: profilePic,
     };
     onSave(updatedUser);
+    // Salva alterações
   };
 
   const handlePicClick = () => {
     fileInputRef.current.click();
+    // Abre seletor de imagem
   };
 
   return (
     <div className={styles.modalBackdrop}>
+      {/* Fundo do modal */}
       <div className={styles.modalContent}>
+        {/* Conteúdo do modal */}
         <div className={styles.header}>
           <h2>Editar Perfil</h2>
           <button className={styles.closeButton} onClick={onClose}>
             &times;
+            {/* Botão de fechar */}
           </button>
         </div>
+
         <div className={styles.body}>
           <div className={styles.profilePicSection}>
             <div
@@ -62,6 +75,7 @@ const EditProfileModal = ({ user, onClose, onSave }) => {
                 className={styles.profilePic}
               />
               <div className={styles.editOverlay}>
+                {/* Ícone para indicar edição da foto */}
                 <svg
                   width="24"
                   height="24"
@@ -83,6 +97,7 @@ const EditProfileModal = ({ user, onClose, onSave }) => {
               onChange={handleFileChange}
               style={{ display: "none" }}
             />
+            {/* Input oculto para upload */}
           </div>
 
           <div className={styles.inputGroup}>
@@ -117,6 +132,7 @@ const EditProfileModal = ({ user, onClose, onSave }) => {
             />
           </div>
         </div>
+
         <div className={styles.footer}>
           <button className={styles.cancelButton} onClick={onClose}>
             Cancelar
@@ -128,6 +144,4 @@ const EditProfileModal = ({ user, onClose, onSave }) => {
       </div>
     </div>
   );
-};
-
-export default EditProfileModal;
+}

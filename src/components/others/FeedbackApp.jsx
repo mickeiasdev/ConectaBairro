@@ -1,4 +1,4 @@
-import AvaliatorStars from "./AvaliatorStars";
+import { AvaliatorStars } from "./AvaliatorStars";
 // Componente de estrelas
 import { FiUser } from "react-icons/fi";
 // Ícone de usuário
