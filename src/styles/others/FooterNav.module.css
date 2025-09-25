@@ -1,4 +1,5 @@
 .footer {
+  height: 7.5vh;
   display: flex;
   justify-content: space-around;
   background: var(--white);
@@ -6,6 +7,8 @@
 }
 
 .link {
+  display: flex;
+  align-items: center;
   background: none;
   line-height: 0;
   border: none;
@@ -16,6 +19,8 @@
 }
 
 .active {
+  display: flex;
+  align-items: center;
   background: none;
   line-height: 0;
   border: none;

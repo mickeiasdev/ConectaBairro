@@ -9,23 +9,11 @@
 
 .mainContent {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: collumn;
   overflow-y: auto;
   padding: 1.5rem;
-  margin: 0.25rem auto;
+  margin: .25rem auto;
   width: 100%;
-}
-
-.profileSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  cursor: pointer;
 }
 
 .profilePicContainer {
@@ -54,7 +42,6 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 40px;
-  cursor: pointer;
 }
 
 .userName {

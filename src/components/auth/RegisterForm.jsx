@@ -37,7 +37,6 @@ export function RegisterForm({ onSuccess }) {
       return;
     }
 
-    // Novas propriedades adicionadas para a foto de perfil e o currículo
     const newUser = { nome, email, senha, profilePic: null, resumeFile: null };
     users.push(newUser);
     localStorage.setItem("usuarios", JSON.stringify(users));

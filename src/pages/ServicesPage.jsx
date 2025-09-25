@@ -12,7 +12,7 @@ export function ServicesPage() {
 
   return (
     <div className={styles.pageContainer}>
-      <Header onLogout={handleLogout} type="Prestadores de Serviços" btn={true} />
+      <Header onLogout={handleLogout} type="Prestadores" btn={true} />
       <main className={styles.mainContent}>
         <h2>Em construção...</h2>
       </main>

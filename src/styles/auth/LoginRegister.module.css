@@ -4,8 +4,6 @@
   align-items: center;
   width: 100%;
   max-width: 25rem;
-  padding: 2rem;
-  background: var(--white);
   border-radius: 0.5rem;
   gap: 1rem;
   position: relative;
