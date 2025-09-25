@@ -6,6 +6,8 @@ import { FooterNav } from "../components/others/FooterNav";
 // Navegação inferior
 import { EditProfileModal } from "../components/settings/EditProfileModal";
 // Modal para edição de perfil
+import { ResumeModal } from "../components/settings/ResumeModal";
+// Modal para currículo
 import styles from "../styles/settings/SettingsPage.module.css";
 // Estilos da página de configurações
 
@@ -21,6 +23,8 @@ export default function SettingsPage() {
   // Estado do usuário logado
   const [isModalOpen, setIsModalOpen] = useState(false);
   // Controla a abertura do modal de edição de perfil
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+  // Controla a abertura do modal de currículo
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("usuarioLogado"));
@@ -54,8 +58,7 @@ export default function SettingsPage() {
 
   const handleMyResume = () => {
     if (user?.resumeFile) {
-      window.open(user.resumeFile, "_blank");
-      // Abre currículo em nova aba
+      setIsResumeModalOpen(true); // Abre o modal
     } else {
       alert(
         "Nenhum currículo anexado. Por favor, anexe um na tela de configurações."
@@ -172,6 +175,14 @@ export default function SettingsPage() {
           user={user}
           onClose={handleCloseModal}
           onSave={handleSaveProfile}
+        />
+      )}
+      {/* Modal de currículo */}
+      {isResumeModalOpen && (
+        <ResumeModal
+          resumeFile={user.resumeFile}
+          onClose={() => setIsResumeModalOpen(false)}
+          userName={user.nome}
         />
       )}
     </div>
