@@ -1,114 +1,165 @@
 .pageContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--gray-200);
+  color: var(--primary-color-dark);
+  overflow: hidden;
 }
 
 .mainContent {
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--white);
-    width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 1.5rem;
+  margin: 0.25rem auto;
+  width: 100%;
 }
 
 .profileSection {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .profilePicContainer {
-    position: relative; /* Essencial para o overlay */
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: var(--gray-300);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--gray-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profilePic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.userName {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.userName h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color-500);
 }
 
 .editOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo escura e transparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.3s ease-in-out;
-    color: var(--white); /* Cor do ícone */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--white);
 }
 
-/* Efeito de hover no container da foto */
 .profilePicContainer:hover .editOverlay {
-    opacity: 1; /* Torna o overlay visível ao passar o mouse */
+  opacity: 1;
 }
 
 .menuList {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 20px;
-    align-self: flex-start; 
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
 .menuItem {
-    width: 100%;
-    padding: 5px 0;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--black);
-    transition: color 0.2s ease-in-out;
-    text-align: left;
+  width: 100%;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black);
+  transition: color 0.2s ease-in-out;
+  text-align: center;
 }
 
 .menuItem:hover {
-    color: var(--primary-color-500);
+  color: var(--primary-color-500);
+}
+
+.attachButton {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--primary-color-500);
+  background-color: transparent;
+  border-radius: 8px;
+  color: var(--primary-color-500);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.attachButton:hover {
+  background-color: var(--primary-color-500);
+  color: var(--white);
 }
 
 .logoutContainer {
-    width: 100%;
-    max-width: 400px;
-    margin-top: auto;
-    align-self: flex-start; 
+  width: 100%;
+  max-width: 400px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .logoutButton {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--primary-color-500);
-    background-color: transparent;
-    border-radius: 8px;
-    color: var(--primary-color-500);
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--primary-color-500);
+  background-color: transparent;
+  border-radius: 8px;
+  color: var(--primary-color-500);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .logoutButton:hover {
-    background-color: var(--primary-color-500);
-    color: var(--white);
+  background-color: var(--primary-color-500);
+  color: var(--white);
 }

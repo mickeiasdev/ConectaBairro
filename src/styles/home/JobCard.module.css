@@ -35,7 +35,7 @@
 
 .button {
   align-self: flex-start;
-  background: var(--secundary-gradient);
+  background: var(--primary-gradient);
   color: var(--white);
   padding: 0.5rem 1rem;
   border: none;
@@ -43,9 +43,8 @@
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: background 0.2s;
 }
 
 .button:hover {
-  background: var(--secundary-gradient-light);
+  background: var(--primary-gradient-light);
 }

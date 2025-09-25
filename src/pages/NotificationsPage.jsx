@@ -12,7 +12,7 @@ export function NotificationsPage() {
 
   return (
     <div className={styles.pageContainer}>
-      <Header onLogout={handleLogout} type="Notificações" />
+      <Header onLogout={handleLogout} type="Notificações" btn={true} />
       <main className={styles.mainContent}>
         <h2>Em construção...</h2>
       </main>

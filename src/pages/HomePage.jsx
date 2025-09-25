@@ -73,7 +73,7 @@ export function HomePage() {
 
   return (
     <div className={styles.pageContainer}>
-      <Header user={user} onLogout={handleLogout} type="Vagas" />
+      <Header user={user} onLogout={handleLogout} type="Vagas" btn={true} />
       <main className={styles.mainContent}>{renderMainContent()}</main>
       <FooterNav current="vagas" />
     </div>
